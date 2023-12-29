@@ -1,0 +1,43 @@
+// how i did it:
+
+function calculator(num1, num2, operator) {
+  if (operator === '+') {
+    console.log(num1 + num2);
+  } else if (operator === '-') {
+    console.log(num1 - num2);
+  } else if (operator === '*') {
+    console.log(num1 * num2);
+  } else if (operator === '/') {
+    console.log(num1 / num2);
+  } else if (
+    operator !== '+' ||
+    operator !== '-' ||
+    operator !== '*' ||
+    operator !== '/'
+  ) {
+    console.log('you did not put a valid operator, try again');
+  }
+}
+calculator(100, 1, '+');
+
+//how he did it
+
+function calculate(num1, num2, opp) {
+  let result;
+  switch (opp) {
+    case '+':
+      result = num1 + num2;
+    case '-':
+      result = num1 - num2;
+    case '*':
+      result = num1 * num2;
+    case '/':
+      result = num1 / num2;
+    default:
+      console.log('invalid opperator');
+  }
+  console.log(result);
+  return result;
+}
+
+calculate(5, 2, '');
